@@ -242,6 +242,11 @@ public class ScoringScript : MonoBehaviour
         Debug.Log("Incremented custom counter: " + PaperPlaneTools.RateBox.Instance.Statistics.CustomEventCount);
 
         PaperPlaneTools.RateBox.Instance.Show();
+
+        if (SkillzCrossPlatform.IsMatchInProgress())
+        {
+            SkillzCrossPlatform.ReportFinalScore(fFinalScoreAfterMultNum);
+        }
     }
 
     public IEnumerator Fade()

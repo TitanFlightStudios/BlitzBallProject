@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using ChartboostSDK;
+using SkillzSDK;
 
 public class LoadLevelScript : MonoBehaviour {
 
@@ -29,9 +30,18 @@ public class LoadLevelScript : MonoBehaviour {
 
     }
 
+    public void Play()
+    {
+        SkillzCrossPlatform.LaunchSkillz(new BlitzBallMatchController());
+
+        SkillzCrossPlatform.GetMatchRules();
+
+
+    }
+
     public void LoadLevelFunction(int LevelToLoad)
     {
-        SceneManager.LoadScene(LevelToLoad);
+        //SceneManager.LoadScene(LevelToLoad);
 
 
         if (AudioListener.volume == 0)
