@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour {
     public GameObject SettingsPanel;
 
     private static int playerAllTimeHighScore;
-    
+
     /// <summary>
     /// Returns the player's all-time high score value.
     /// </summary>

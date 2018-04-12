@@ -284,6 +284,11 @@ public class CatchBallScript : MonoBehaviour {
 
                     bBallWasCaught = false;
 
+                    if (SkillzCrossPlatform.IsMatchInProgress())
+                    {
+                        SkillzCrossPlatform.UpdatePlayersCurrentScore(ScoringScript.fFinalScoreAfterMultNum);
+                    }
+
                 }
                 else if (ObjectThatWasHit != "Ball")
                 {
